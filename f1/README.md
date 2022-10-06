@@ -29,10 +29,14 @@
 
 ## Non-Kaggle Dataset Evaluation
 
-### [Fast F1 Package]()
+### [Fast F1 Package](https://theoehrly.github.io/Fast-F1/)
 
 * Pretty cool python package that allows access to deep formula 1 telemetry data across laps, corners, etc on dimensions like throttles, brakes, speed
 
 ### [Sports Radar API](https://developer.sportradar.com/docs/read/racing/Formula_1_v2#formula-1-api-overview)
 
+* Detailed API, may incur additional cost
+
 ### [Ergast Sports Developer API](https://ergast.com/mrd/)
+
+* Detailed API, may incur additional cost
