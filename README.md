@@ -62,3 +62,13 @@ python -m ipykernel install --user --name=project_207
     conda install -c anaconda ipykernel -y
     python -m ipykernel install --user --name=project_207
     ```
+    
+* Download Kaggle dataset
+    * Get API key from [`https://www.kaggle.com/account`](https://www.kaggle.com/account)
+    * Review [Kaggle API Docs](https://www.kaggle.com/docs/api)
+    * Add Kaggle API key to `w207_final_project/credentials` (all files within this directory are ignored by git)
+    ```bash
+    mkdir ~/.kaggle
+    cp credentials/kaggle.json ~/.kaggle/kaggle.json
+    kaggle datasets download -d csafrit2/plant-leaves-for-image-classification
+    ```
