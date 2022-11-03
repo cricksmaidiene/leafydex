@@ -132,3 +132,5 @@ credentials/*.json
 credentials/*.txt
 data/*.jpg
 data/*.png
+
+node_modules
