@@ -1,0 +1,24 @@
+{
+  "name": "mld_classification_207",
+  "version": "1.0.0",
+  "description": "Final project for MIDS 207 - Fall 22",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14",
+    "husky": "^7.0.0"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cricksmaidiene/w207_final_project.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/cricksmaidiene/w207_final_project/issues"
+  },
+  "homepage": "https://github.com/cricksmaidiene/w207_final_project#readme",
+  "packageManager": "pnpm@7.13.2"
+}
