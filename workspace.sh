@@ -26,6 +26,7 @@ git clone https://github.com/cricksmaidiene/w207_final_project
 cd w207_final_project
 
 # kaggle and data stuff
+python -m pip install kaggle
 mkdir ~/.kaggle
 cp credentials/kaggle.json ~/.kaggle/kaggle.json
 cd data

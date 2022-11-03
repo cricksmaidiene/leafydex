@@ -1,7 +1,7 @@
 # Multispecies Leaf Disease Classification 🍃
 ![Python version](https://img.shields.io/badge/python-v3.10-green)
 
-![Python version](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white)
 ![Anaconda](https://img.shields.io/badge/Anaconda-44A833.svg?style=for-the-badge&logo=Anaconda&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white)
 
@@ -79,6 +79,7 @@ python -m ipykernel install --user --name=project_207
     * Add Kaggle API key to `w207_final_project/credentials` (all files within this directory are ignored by git)
 
     ```bash
+    python -m pip install kaggle
     mkdir ~/.kaggle
     cp credentials/kaggle.json ~/.kaggle/kaggle.json
     cd data
