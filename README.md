@@ -1,6 +1,6 @@
 # Multispecies Leaf Disease Classification 🍃
 ![Python version](https://img.shields.io/badge/python-v3.10-green)
-    
+
 ![Python version](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white)
 ![Anaconda](https://img.shields.io/badge/Anaconda-44A833.svg?style=for-the-badge&logo=Anaconda&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white)
@@ -18,7 +18,7 @@
 
 ### For viewers 🔍
 
-* Use the the anaconda environment lock file to setup. 
+* Use the the anaconda environment lock file to setup.
 * Add conda environment as jupyter kernel to run notebooks.
 
 ```bash
@@ -29,6 +29,12 @@ python -m ipykernel install --user --name=project_207
 
 ### For developers 👩🏽‍💻
 
+#### :notebook: Requirements
+
+- `python@3.10`
+- `node@^16.17.1`
+- `pnpm@^7.13.2`
+
 #### Automatic Setup (Linux / Mac only) ⚙️
 
 * Setup the workspace using `workspace.sh` file
@@ -36,39 +42,46 @@ python -m ipykernel install --user --name=project_207
     ```bash
     bash workspace.sh
     ```
-    
+
     * Installs a conda environment with `python v3.10`
     * Adds the conda environment as a jupyter kernel to be used for notebooks
     * Downloads the project repository and installs necessary packages
     * Runs husky and pre-commit hooks
- 
+
 #### Manual Setup 🛠
 
 * Setup conda environment with `python v3.10`
     ```bash
-    conda create --name project_207 python=3.10 -y
+    conda env create -f environment.lock.yaml --force
     conda activate project_207
     ```
-    
-* Clone the repository and install dependencies
-    ```bash
-    git clone https://github.com/cricksmaidiene/w207_final_project
-    cd w207_final_project
-    python -m pip install -r requirements.txt
-    ```
-
 * Add anaconda environment as a Jupyter Kernel
     ```bash
     conda install -c anaconda ipykernel -y
     python -m ipykernel install --user --name=project_207
     ```
-    
+* Install `node` dependencies and set [husky](https://typicode.github.io/husky/#/) as executable:
+    ```bash
+    pnpm i
+    chmod ug+x .husky/*
+    chmod ug+x .git/hooks/*
+    ```
+
+* Clone the repository (dependencies already installed through conda environment file)
+    ```bash
+    git clone https://github.com/cricksmaidiene/w207_final_project
+    cd w207_final_project
+    ```
+
 * Download Kaggle dataset
     * Get API key from [`https://www.kaggle.com/account`](https://www.kaggle.com/account)
     * Review [Kaggle API Docs](https://www.kaggle.com/docs/api)
     * Add Kaggle API key to `w207_final_project/credentials` (all files within this directory are ignored by git)
+
     ```bash
     mkdir ~/.kaggle
     cp credentials/kaggle.json ~/.kaggle/kaggle.json
+    cd data
     kaggle datasets download -d csafrit2/plant-leaves-for-image-classification
+    unzip plant-leaves-for-image-classification
     ```
