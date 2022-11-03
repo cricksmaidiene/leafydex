@@ -1,4 +1,4 @@
-# Multispecies Leaf Disease Classification 🍃
+# Multispecies Leaf Disease & Leaf Type Classification 🍃
 ![Python version](https://img.shields.io/badge/python-v3.10-green)
 
 ![Python](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white)
@@ -23,8 +23,8 @@
 
 ```bash
 conda env create -f environment.lock.yaml --force
-conda activate project_207
-python -m ipykernel install --user --name=project_207
+conda activate leafydex
+python -m ipykernel install --user --name=leafydex
 ```
 
 ### For developers 👩🏽‍💻
@@ -53,12 +53,16 @@ python -m ipykernel install --user --name=project_207
 * Setup conda environment with `python v3.10`
     ```bash
     conda env create -f environment.lock.yaml --force
-    conda activate project_207
+    conda activate leafydex
     ```
 * Add anaconda environment as a Jupyter Kernel
     ```bash
     conda install -c anaconda ipykernel -y
-    python -m ipykernel install --user --name=project_207
+    python -m ipykernel install --user --name=leafydex
+    ```
+* Install additional python dependencies
+    ```bash
+    python -m pip install black pre-commit kaggle
     ```
 * Install `node` dependencies and set [husky](https://typicode.github.io/husky/#/) as executable:
     ```bash
@@ -69,17 +73,16 @@ python -m ipykernel install --user --name=project_207
 
 * Clone the repository (dependencies already installed through conda environment file)
     ```bash
-    git clone https://github.com/cricksmaidiene/w207_final_project
-    cd w207_final_project
+    git clone https://github.com/cricksmaidiene/leafydex
+    cd leafydex
     ```
 
 * Download Kaggle dataset
     * Get API key from [`https://www.kaggle.com/account`](https://www.kaggle.com/account)
     * Review [Kaggle API Docs](https://www.kaggle.com/docs/api)
-    * Add Kaggle API key to `w207_final_project/credentials` (all files within this directory are ignored by git)
+    * Add Kaggle API key to `leafydex/credentials` (all files within this directory are ignored by git)
 
     ```bash
-    python -m pip install kaggle
     mkdir ~/.kaggle
     cp credentials/kaggle.json ~/.kaggle/kaggle.json
     cd data

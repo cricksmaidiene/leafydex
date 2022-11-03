@@ -1,5 +1,5 @@
 {
-  "name": "mld_classification_207",
+  "name": "leafydex",
   "version": "1.0.0",
   "description": "Final project for MIDS 207 - Fall 22",
   "scripts": {
@@ -13,12 +13,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cricksmaidiene/w207_final_project.git"
+    "url": "git+https://github.com/cricksmaidiene/leafydex.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/cricksmaidiene/w207_final_project/issues"
+    "url": "https://github.com/cricksmaidiene/leafydex/issues"
   },
-  "homepage": "https://github.com/cricksmaidiene/w207_final_project#readme",
+  "homepage": "https://github.com/cricksmaidiene/leafydex#readme",
   "packageManager": "pnpm@7.13.2"
 }
