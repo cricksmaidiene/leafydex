@@ -75,6 +75,10 @@ def train_and_evaluate(
     learning_rate=0.01,
     num_epochs=20,
     batch_size=32,
+    images_training: list[np.ndarray] | None=None,
+    images_test: list[np.ndarray] | None=None,
+    image_label_train: np.ndarray | None=None,
+    image_label_test: np.ndarray | None=None
 ):
 
     # Build the model.
@@ -88,7 +92,7 @@ def train_and_evaluate(
 
     X_train = np.array(images_training)
     # X_train = images_training
-    Y_train = image_label
+    Y_train = image_label_train
 
     X_test = np.array(images_test)
     # X_test = images_test
