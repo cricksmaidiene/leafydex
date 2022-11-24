@@ -1,4 +1,5 @@
 # Multispecies Leaf Disease & Leaf Type Classification 🍃
+
 ![Python version](https://img.shields.io/badge/python-v3.10-green)
 
 ![Python](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white)
@@ -16,76 +17,43 @@
 
 ## Setup 📦
 
-### For viewers 🔍
+* Setup Locally
 
-* Use the the anaconda environment lock file to setup.
-* Add conda environment as jupyter kernel to run notebooks.
+### :notebook: Requirements
+
+* `python@3.10`
+* `conda` environment
+
+### Local Setup
+
+Assuming `conda` and `python` are available and are in `PATH` (accessible from anywhere on the system), run the following commands:
 
 ```bash
-conda env create -f environment.lock.yaml --force
+conda env create --name leafydex python=3.10 -y
 conda activate leafydex
+conda install -c anaconda ipykernel -y
 python -m ipykernel install --user --name=leafydex
+git clone https://github.com/cricksmaidiene/leafydex
+cd leafydex
+python -m pip install -r requirements.txt
 ```
 
-### For developers 👩🏽‍💻
+### Use Github Codepsaces
 
-#### :notebook: Requirements
+* Go to the top-right corner of the repository and click `Code`
+* Start a [github codespaces](https://docs.github.com/en/codespaces) on the `main` branch
+* append `?editor=jupyter` of the codespaces URL to start exploring on Jupyterlab
 
-- `python@3.10`
-- `node@^16.17.1`
-- `pnpm@^7.13.2`
+## Dataset Setup 🛠
 
-#### Automatic Setup (Linux / Mac only) ⚙️
+* Get API key from [`https://www.kaggle.com/account`](https://www.kaggle.com/account)
+* Review [Kaggle API Docs](https://www.kaggle.com/docs/api)
+* Add Kaggle API key to `leafydex/credentials` (all files within this directory are ignored by git)
 
-* Setup the workspace using `workspace.sh` file
-
-    ```bash
-    bash workspace.sh
-    ```
-
-    * Installs a conda environment with `python v3.10`
-    * Adds the conda environment as a jupyter kernel to be used for notebooks
-    * Downloads the project repository and installs necessary packages
-    * Runs husky and pre-commit hooks
-
-#### Manual Setup 🛠
-
-* Setup conda environment with `python v3.10`
-    ```bash
-    conda env create -f environment.lock.yaml --force
-    conda activate leafydex
-    ```
-* Add anaconda environment as a Jupyter Kernel
-    ```bash
-    conda install -c anaconda ipykernel -y
-    python -m ipykernel install --user --name=leafydex
-    ```
-* Install additional python dependencies
-    ```bash
-    python -m pip install black pre-commit kaggle
-    ```
-* Install `node` dependencies and set [husky](https://typicode.github.io/husky/#/) as executable:
-    ```bash
-    pnpm i
-    chmod ug+x .husky/*
-    chmod ug+x .git/hooks/*
-    ```
-
-* Clone the repository (dependencies already installed through conda environment file)
-    ```bash
-    git clone https://github.com/cricksmaidiene/leafydex
-    cd leafydex
-    ```
-
-* Download Kaggle dataset
-    * Get API key from [`https://www.kaggle.com/account`](https://www.kaggle.com/account)
-    * Review [Kaggle API Docs](https://www.kaggle.com/docs/api)
-    * Add Kaggle API key to `leafydex/credentials` (all files within this directory are ignored by git)
-
-    ```bash
-    mkdir ~/.kaggle
-    cp credentials/kaggle.json ~/.kaggle/kaggle.json
-    cd data
-    kaggle datasets download -d csafrit2/plant-leaves-for-image-classification
-    unzip plant-leaves-for-image-classification
-    ```
+```bash
+mkdir ~/.kaggle
+cp credentials/kaggle.json ~/.kaggle/kaggle.json
+cd data
+kaggle datasets download -d csafrit2/plant-leaves-for-image-classification
+unzip plant-leaves-for-image-classification
+```
