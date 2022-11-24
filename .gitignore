@@ -66,3 +66,6 @@ target/
 
 # ipynb checkpoints
 .ipynb_checkpoints
+
+# ignore credentials
+credentials/**
