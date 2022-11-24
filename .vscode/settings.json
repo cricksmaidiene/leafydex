@@ -1,15 +1,20 @@
 {
-    // Environment
-    "python.terminal.activateEnvironment": true,
-    // Formatting
-    "python.formatting.provider": "black",
-    "python.formatting.autopep8Args": ["--select=W293"],
-    // Linting
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[toml]": {
+      "editor.defaultFormatter": "bodil.prettier-toml"
+    },
+    "autoDocstring.docstringFormat": "google",
+    "autoDocstring.quoteStyle": "\"\"\"",
+    "isort.check": true,
+    "isort.importStrategy": "fromEnvironment",
+    "isort.severity": {
+      "E": "Information"
+    },
+    "python.formatting.provider": "none",
+    "python.languageServer": "Pylance",
     "python.linting.enabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.mypyEnabled": false,
     "python.linting.banditEnabled": false,
-    "python.linting.pydocstyleEnabled": false,
-    "python.linting.pycodestyleEnabled": false
-  }
+    "python.linting.pylamaEnabled": false
+}
