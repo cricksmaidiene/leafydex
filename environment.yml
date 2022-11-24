@@ -2,7 +2,7 @@ dependencies:
   - jupyter
   - matplotlib
   - numpy
-  - psycopg2-binary
+  - psycopg2
   - pylint
   - tensorflow
   - keras
