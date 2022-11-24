@@ -6,29 +6,14 @@
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
-		"ghcr.io/devcontainers/features/anaconda:1": {},
-		"ghcr.io/devcontainers/features/aws-cli:1": {},
-		"ghcr.io/devcontainers/features/conda:1": {},
-		"ghcr.io/devcontainers/features/docker-from-docker:1": {},
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/git-lfs:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {},
-		"ghcr.io/devcontainers/features/java:1": {},
-		"ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/devcontainers/features/python:1": {},
-		"ghcr.io/rocker-org/devcontainer-features/miniforge:0": {},
-		"ghcr.io/devcontainers-contrib/features/black:1": {},
-		"ghcr.io/devcontainers-contrib/features/cookiecutter:1": {},
-		"ghcr.io/devcontainers-contrib/features/flake8:1": {},
-		"ghcr.io/devcontainers-contrib/features/flit:1": {},
-		"ghcr.io/devcontainers-contrib/features/isort:1": {},
-		"ghcr.io/devcontainers-contrib/features/mkdocs:1": {},
-		"ghcr.io/devcontainers-contrib/features/mypy:1": {},
-		"ghcr.io/devcontainers-contrib/features/pipenv:1": {},
-		"ghcr.io/devcontainers-contrib/features/pre-commit:1": {},
-		"ghcr.io/devcontainers-contrib/features/pylint:1": {},
-		"ghcr.io/dhoeric/features/google-cloud-cli:1": {},
-		"ghcr.io/NicoVIII/devcontainer-features/pnpm:1": {}
+		"ghcr.io/devcontainers/features/anaconda:1": {"version": "latest"},
+		"ghcr.io/devcontainers/features/conda:1": {"version": "latest"},
+		"ghcr.io/devcontainers/features/git:1": {"version": "latest"},
+		"ghcr.io/devcontainers/features/python:1": {"version": "latest"},
+		"ghcr.io/devcontainers-contrib/features/black:1": {"version": "latest"},
+		"ghcr.io/devcontainers-contrib/features/cookiecutter:1": {"version": "latest"},
+		"ghcr.io/devcontainers-contrib/features/isort:1": {"version": "latest"},
+		"ghcr.io/devcontainers-contrib/features/pre-commit:1": {"version": "latest"}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
