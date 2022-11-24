@@ -1,35 +1,12 @@
-# Leafydex guide installation
+# Leafydex Package - Notebook Guide
 
-## Prerequisites
+- [Leafydex Package - Notebook Guide](#leafydex-package---notebook-guide)
+  - [Module in Notebook](#module-in-notebook)
+  - [Set up Git diff for notebooks and lab](#set-up-git-diff-for-notebooks-and-lab)
+  - [Set up Plotly for Jupyterlab](#set-up-plotly-for-jupyterlab)
+- [Invoke command](#invoke-command)
 
-- [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html)
-- Optional [Mamba](https://mamba.readthedocs.io/en/latest/)
-
-## Create environment
-
-```bash
-conda env create -f environment.yml
-activate leafydex
-```
-
-or 
-
-```bash
-mamba env create -f environment.yml
-activate leafydex
-```
-
-The packages necessary to run the project are now installed inside the conda environment.
-
-**Note: The following sections assume you are located in your conda environment.**
-
-## Set up project's module
-
-To move beyond notebook prototyping, all reusable code should go into the `leafydex/` folder package. To use that package inside your project, install the project's module in editable mode, so you can edit files in the `leafydex` folder and use the modules inside your notebooks :
-
-```bash
-pip install --editable .
-```
+## Module in Notebook
 
 To use the module inside your notebooks, add `%autoreload` at the top of your notebook :
 
@@ -78,11 +55,11 @@ You may need to rebuild the extension : `jupyter lab build`
 
 Plotly works in notebook but further steps are needed for it to work in Jupyterlab :
 
-* @jupyter-widgets/jupyterlab-manager # Jupyter widgets support
-* plotlywidget  # FigureWidget support
-* @jupyterlab/plotly-extension  # offline iplot support
+- @jupyter-widgets/jupyterlab-manager # Jupyter widgets support
+- plotlywidget  # FigureWidget support
+- @jupyterlab/plotly-extension  # offline iplot support
 
-There are conflict versions between those extensions so check the [latest Plotly README](https://github.com/plotly/plotly.py#installation-of-plotlypy-version-3) to ensure you fetch the correct ones. 
+There are conflict versions between those extensions so check the [latest Plotly README](https://github.com/plotly/plotly.py#installation-of-plotlypy-version-3) to ensure you fetch the correct ones.
 
 ```
 jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.36 --no-build
