@@ -66,3 +66,11 @@ target/
 
 # ignore credentials
 credentials/**
+
+# ignore data files in data dir
+data/**/*.csv
+data/**/*.json
+data/**/*.joblib
+data/**/*.png
+data/**/*.jpg
+data/**/*.svg
