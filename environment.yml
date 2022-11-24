@@ -1,13 +1,35 @@
+# conda env create --file environment.yml
+# mamba env create --file environment.yml
+name: leafydex
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
 dependencies:
+  - pre-commit
+  - black
+  - invoke
   - jupyter
-  - matplotlib
-  - numpy
-  - psycopg2
-  - pylint
-  - tensorflow
+  - jupyterlab
   - keras
-  - pandas
-  - plotly
-  - pillow
-  - tqdm
+  - lightgbm
   - matplotlib
+  - missingno
+  - nbdime
+  - numpy
+  - pandas
+  - pandas-flavor
+  - pandas-profiling
+  - pip
+  - plotly
+  - pyjanitor
+  - pylint
+  - pyprojroot
+  - pyspark
+  - python=3.10
+  - python-dotenv
+  - scikit-learn
+  - seaborn
+  - statsmodels
+  - tensorflow
+  
