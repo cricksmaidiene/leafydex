@@ -65,7 +65,7 @@ target/
 .ipynb_checkpoints
 
 # ignore credentials
-credentials/**
+credentials/*.json
 
 # ignore data files in data dir
 data/**/*.csv
