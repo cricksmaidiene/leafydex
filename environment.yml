@@ -1,0 +1,13 @@
+dependencies:
+  - jupyter
+  - matplotlib
+  - numpy
+  - psycopg2-binary
+  - pylint
+  - tensorflow
+  - keras
+  - pandas
+  - plotly
+  - pillow
+  - tqdm
+  - matplotlib
