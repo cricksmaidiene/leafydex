@@ -46,14 +46,18 @@ python -m pip install -r requirements.txt
 
 ## Dataset Setup 🛠
 
-* Get API key from [`https://www.kaggle.com/account`](https://www.kaggle.com/account)
-* Review [Kaggle API Docs](https://www.kaggle.com/docs/api)
-* Add Kaggle API key to `leafydex/credentials` (all files within this directory are ignored by git)
+> Add Kaggle API key to `leafydex/credentials` (all files within this directory are ignored by git)
 
+Instructions for UNIX-based systems (or Codespaces). Windows may require different commands
 ```bash
-mkdir ~/.kaggle
+mkdir ~/.kaggle #ignore if directory already present
+chmod 600 credentials/kaggle.json
 cp credentials/kaggle.json ~/.kaggle/kaggle.json
+python -m pip install kaggle
 cd data
 kaggle datasets download -d csafrit2/plant-leaves-for-image-classification
 unzip plant-leaves-for-image-classification
 ```
+
+* Get API key from [`https://www.kaggle.com/account`](https://www.kaggle.com/account)
+* Review [Kaggle API Docs](https://www.kaggle.com/docs/api)
