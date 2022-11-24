@@ -66,7 +66,8 @@ chmod 600 credentials/kaggle.json
 cp credentials/kaggle.json ~/.kaggle/kaggle.json
 python -m pip install kaggle
 kaggle datasets download -d csafrit2/plant-leaves-for-image-classification -p ./data/raw
-unzip plant-leaves-for-image-classification
+unzip data/raw/plant-leaves-for-image-classification.zip -d data/raw
+rm data/raw/plant-leaves-for-image-classification.zip
 ```
 
 - Get API key from [`https://www.kaggle.com/account`](https://www.kaggle.com/account)
