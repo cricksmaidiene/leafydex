@@ -25,8 +25,6 @@
 
 ## Setup 📦
 
-- Setup Locally
-
 ### :notebook: Requirements
 
 - `python@3.10`
