@@ -9,6 +9,13 @@ repos:
     hooks:
       - id: black
   
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.5.3
+    hooks:
+    - id: nbqa-black
+    - id: nbqa-isort
+      args: ["--float-to-top"]
+  
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0  # Use the ref you want to point at
     hooks:
