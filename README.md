@@ -35,7 +35,7 @@
 Assuming `conda` and `python` are available and are in `PATH` (accessible from anywhere on the system), run the following commands:
 
 ```bash
-conda env create -f environment.yml
+conda env create --name leafydex python=3.10 -y
 conda activate leafydex
 
 conda install -c anaconda ipykernel -y
@@ -43,7 +43,8 @@ python -m ipykernel install --user --name=leafydex
 
 git clone https://github.com/cricksmaidiene/leafydex
 cd leafydex
-pip install -e .
+python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
 
 ### Use Github Codepsaces
@@ -76,6 +77,8 @@ rm data/raw/plant-leaves-for-image-classification.zip
 - **Practices**: Please read [practices.md](practices.md) for details on how to set up this project beyond the base installation.
 
 - **Structure**: Please read [structure.md](structure.md) to see the file structure of this project
+
+- **Execution Trail**: Please read [trail.md](trail.md) to see the trail of execution across multiple files
 
 ---
 Project structure based on the [cookiecutter conda data science project template](https://github.com/jvelezmagic/cookiecutter-conda-data-science).
