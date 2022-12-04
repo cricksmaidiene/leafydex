@@ -25,3 +25,4 @@ tensorflow
 nbqa
 opencv-python
 inflection
+kaleido
