@@ -7,7 +7,7 @@ Both source and destination directory have the exact same paths and filenames.
 Any compression setting can be used to write a new directory of compressed images. 
 """
 
-
+from pyprojroot import here
 import os
 import pathlib
 import shutil
@@ -23,6 +23,7 @@ tqdm.pandas()
 """
 Set configurations
 """
+
 HD_IMG_DIR: str = "Plants_2"
 CMP_IMG_DIR: str = "Plants_2_compressed"
 COMPRESS_SIZE: tuple[int, int] = (200, 200)
@@ -30,9 +31,9 @@ COMPRESS_SIZE: tuple[int, int] = (200, 200)
 # store the filepath address of the current file
 __file__: str = os.path.abspath("")
 
-ROOT_DIR_PATH: str = os.path.join(pathlib.Path(__file__).parent.parent)
-HD_IMG_DIR_PATH: str = os.path.join(ROOT_DIR_PATH, "data", HD_IMG_DIR)
-CMP_IMG_DIR_PATH: str = os.path.join(ROOT_DIR_PATH, "data", CMP_IMG_DIR)
+ROOT_DIR_PATH: str = here()
+HD_IMG_DIR_PATH: str = os.path.join(ROOT_DIR_PATH, "data", "raw", HD_IMG_DIR)
+CMP_IMG_DIR_PATH: str = os.path.join(ROOT_DIR_PATH, "data", "raw", CMP_IMG_DIR)
 
 """
 Create clone directory
